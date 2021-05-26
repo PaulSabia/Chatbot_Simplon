@@ -1,0 +1,43 @@
+version: "3.8"
+
+services :
+    # mongodb:
+    #     image: mongo
+    #     container_name: mongodb
+    #     environment:
+    #         - PUID=1000
+    #         - PGID=1000
+    #     volumes:
+    #         #Créer un volume pour remplir la base ?
+    #         - ./database:/data/db
+    #     ports:
+    #         - 27017:27017
+    #     restart: unless-stopped
+
+
+    api: 
+        build:
+            context: ./API
+        container_name: api
+        ports:
+            - 5000:5000
+        volumes:
+            - .:/API
+        command: uvicorn api:api --reload --workers 1 --host 0.0.0.0 --port 5000
+        # depends_on:
+        #     - mongodb
+        environment:
+            - ENVIRONMENT=dev
+            - TESTING=0
+
+    flask_app: 
+        build:
+            context: ./app
+        container_name: flask_app
+        ports:
+            - 5001:5001
+        volumes:
+            - .:/app
+        environment:
+            FLASK_ENV: development
+        command: flask run --host 0.0.0.0 --port 5001

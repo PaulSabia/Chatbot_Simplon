@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" lang="fr">
+<!--
+
+* AerWebCopy Engine [version 6.3.0]
+* Copyright Aeroson Systems & Co.
+* File mirrored from https://simplon.co/
+* At UTC time: 2021-05-06 10:18:43.234240
+
+--><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+        <title> - Simplon.co - Fabriques labellis&#233;es Grande Ecole du Num&#233;rique - In Code We Trust #frenchtech #ess #empowerment</title>
+<meta name="description" content="Fabriques labellis&#233;es Grande Ecole du Num&#233;rique - In Code We Trust #frenchtech #ess #empowerment">
+<meta name="keywords" content="simplon, formation web, formation d&#233;veloppeur web">
+<meta property="og:description" content="Fabriques labellis&#233;es Grande Ecole du Num&#233;rique - In Code We Trust #frenchtech #ess #empowerment">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:url" content="https://simplon.co">
+<meta property="og:site_name" content="simplon-co-v2">
+<meta property="og:image" content="https://simplon.co/uploads/Site national/Home-site-national/Simplon-co.png">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@simplonco">
+<meta name="twitter:title" content="">
+<meta name="twitter:description" content="Fabriques labellis&#233;es Grande Ecole du Num&#233;rique - In Code We Trust #frenchtech #ess #empowerment">
+<meta name="twitter:image" content="https://simplon.co/uploads/Site national/Home-site-national/Simplon-co.png">
+<meta name="twitter:url" content="https://simplon.co">
+
+
+
+    <!-- !!!!!!!!!!! CHATBOT DEBUT !!!!!!!!!!! -->
+
+    <!-- favicon -->
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+    <!-- cnn pour les icônes google material icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.2/iconfont/material-icons.min.css" integrity="sha512-y9glprRcVESvYY3suAqBUYXx0ySbQNvbzzgvLy9F2o38Y7XCNeq/No2gnHjV3+Rjyq5ijoPZRMXotpdw6jcG4g==" crossorigin="anonymous">
+    <!-- cnn pour les jolies animations CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/style_test.css')}}">
+    <!-- import de tensorflow js -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.7.0/dist/tf.min.js"></script>
+
+    <!-- !!!!!!!!!!! CHATBOT FIN !!!!!!!!!!! -->
+
+
+    
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="G3okE9uQ9gxzvirne3lY4kL8fFO8LipCiErz1lfl">
+
+
+    <!-- Styles -->
+    <link href="{{ url_for('static', filename='simplon_css/9419e3e4__app.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='simplon_css/9419e3e4__app.css')}}" rel="preload" as="style">
+    <script src="{{ url_for('static', filename='simplon_unpkg.com/orejime%401.2.3/dist/4ea4e02e__orejime.js')}}"></script>
+
+            <!-- Google Tag Manager -->
+    <script type="opt-in" data-type="application/javascript" data-name="google-tag-manager">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-W447KD8');</script>
+    <!-- End Google Tag Manager -->
+
+    <script async type="opt-in" data-type="application/javascript" data-name="twitter" data-src="../platform.twitter.com/8ba75c10__widgets.js" charset="utf-8"></script>
+    
+    </head>
+<body class="spm_front_body">
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe type="opt-in" data-type="application/javascript" data-name="google-tag-manager" data-src="../www.googletagmanager.com/c3e32ff6__ns.html" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <div id="orejime"></div>
+
+
+
+
+    <!-- !!!!!!!!!!! CHATBOT DEBUT !!!!!!!!!!! -->
+
+    <button class="chat-btn">
+    <i class="material-icons">live_help</i>
+    </button>
+
+    <div class="chat-popup animate__animated animate__fadeInUp">
+        <!-- <div class="badge">1</div> -->
+        
+        <div class="chat-area">
+            <div class="income-msg">
+                <img class="avatar" src="{{ url_for('static', filename='img/bot.png')}}" alt="">
+                <span class="msg">
+                    Bonjour, comment puis-je vous aider ?
+                </span>
+            </div>
+        </div>            
+    
+
+        <div class="input-area">
+            <!-- <form enctype='application/json' action="/" method="POST"> -->
+                <input type="text" name="message">
+            <!-- </form> -->
+            <button id="emoji-btn">&#128512;</button>
+            <button class="submit">
+            <i class="material-icons">send</i></button>
+        </div>
+    
+    </div>
+
+    <!-- !!!!!!!!!!! CHATBOT FIN !!!!!!!!!!! -->
+
+
+
+
+
+    <div id="app">
+        <header class="smp_header_front" id="head" tabindex="-1">
+          <nav id="navbar" class="container navbar navbar-expand-lg navbar-light bg-white">
+
+    <div class="navbar-top-mobile">
+
+                    <a href="./file_a1074a98.pwc" class="smp-logo-mobile">
+                    <img src="{{ url_for('static', filename='simplon_images/4d895b82__logo.svg')}}" id="smp-logo-mobile" class="img-fluid" alt="logo">
+            </a>
+        
+        <button class="hamburger hamburger--spin" id="hamburger" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+        </button>
+    </div>
+
+    <div id="navbarSupportedContent" class="navbar-content collapse">
+        <div class="navbar-top">
+
+                            <div class="navbar-top-left">
+                    <div class="navbar-collapse">
+                        <button type="button" class="a11y-btn" aria-label="Navigation Rapide"><i class="fa fa-universal-access" aria-hidden="true"></i></button>
+                        <nav>
+        <ul class="menu_a11y main_nav navigation_a11y">
+            <li class="align-middle nav-item nav-link
+                ">
+        <a href="./735ab97f__a-propos.html" class="">
+            &#192; propos
+        </a>
+            </li>
+<li class="align-middle nav-item nav-link
+                ">
+        <a href="./ed9a2064__reseau-de-fabriques.html" class="">
+            Notre r&#233;seau de Fabriques
+        </a>
+            </li>
+<li class="align-middle nav-item nav-link
+                ">
+        <a href="./c85ec18e__entreprises-et-associations.html" class="">
+            Entreprises et associations
+        </a>
+            </li>
+        </ul>
+    </nav>
+                    </div>
+                </div>
+            
+
+            <div class="navbar-top-right">
+                <ul class="menu_a11y navigation_a11y">
+                                                                        <li><a class="lang-link nav-link fr active" href="./file_a1074a98.pwc">FR</a></li>
+                            <li><a class="lang-link nav-link en" href="../en.simplon.co/file_d6486712.pwc">EN</a></li>
+
+                </ul>
+                <social-networks :settings='[{"id":1,"name":"facebook","link":"https:\/\/www.facebook.com\/Simplon.co\/","network_id":1,"created_at":"2020-01-14 15:37:34","updated_at":"2020-01-14 15:37:34"},{"id":2,"name":"twitter","link":"https:\/\/twitter.com\/simplonco","network_id":1,"created_at":"2020-01-14 15:37:49","updated_at":"2020-01-14 15:37:49"},{"id":3,"name":"linkedin","link":"https:\/\/www.linkedin.com\/company\/3148332\/admin\/","network_id":1,"created_at":"2020-01-14 15:38:27","updated_at":"2020-01-14 15:38:27"},{"id":4,"name":"youtube","link":"https:\/\/www.youtube.com\/channel\/UCTFYd2sOfjrJH1C421UyYuQ","network_id":1,"created_at":"2020-01-14 15:38:47","updated_at":"2020-01-14 15:38:47"},{"id":10,"name":"instagram","link":"https:\/\/www.instagram.com\/simplonco\/?hl=fr","network_id":1,"created_at":"2020-08-06 14:16:28","updated_at":"2020-08-06 14:16:28"}]' language="fr" twitter linkedin facebook instagram youtube>
+                </social-networks>
+            </div>
+
+        </div>
+
+        <div class="navbar-bottom">
+
+
+                            <a class="navbar-logo" href="./file_a1074a98.pwc">
+                    <img src="{{ url_for('static', filename='simplon_images/4d895b82__logo.svg')}}" class="img-fluid" alt="logo">
+                </a>
+            
+
+                            <nav class="menu-drop-down-items">
+        <ul class="menu_a11y main_nav">
+            <li class="align-middle nav-item nav-link dropdown
+                ">
+            <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                Vous voulez...
+            </a>
+                            <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="./4d1d0b51__ouvrir-une-fabrique.html">Ouvrir une Fabrique</a>
+                                            <a class="dropdown-item" href="./c85ec18e__entreprises-et-associations.html">Travailler avec Simplon.co</a>
+                                            <a class="dropdown-item" href="./c9accba1__recrutez-des-talents-formes-par-simplon.html">Recruter nos talents</a>
+                                            <a class="dropdown-item" href="./ab147ba5__nous-rejoindre.html">Rejoindre nos &#233;quipes</a>
+                                            <a class="dropdown-item" href="./1e5776b6__formateurs.html">Devenir formateur</a>
+                                    </div>
+                    </li>
+    <li class="align-middle nav-item nav-link dropdown
+                ">
+            <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                Vous former &#224; Simplon
+            </a>
+                            <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="./51dfbaf3__notre-offre-de-formation.html">Notre offre de formation</a>
+                                            <a class="dropdown-item" href="./ae548fdd__sessions.html">Trouvez votre formation</a>
+                                            <a class="dropdown-item" href="blog/actualites/bce1f100__validez-vos-acquis-de-l-experience-avec-simplon.html">Faire une VAE</a>
+                                    </div>
+                    </li>
+    <li class="nav-item nav-item align-middle nav-link single-link">
+            <a href="./99abccff__contact.html" class="               ">
+                Nous contacter
+            </a>
+        </li>
+            </ul>
+    </nav>
+            
+        </div>
+    </div>
+</nav>
+        </header>
+
+        
+        <main id="main" tabindex="-1">
+            <div class="container">
+                                </div>
+                <div class="responsive-content  page-daccueil">
+        <section class="responsive-content-inner">
+            <div class="header header-home"><div id="widget_5f119767148f1" data-config='{"widget":"image-component","id": 35048}' class="shortcode"><img src="{{ url_for('static', filename='simplon_storage/35048/responsive-images/194652bf__header___medialibrary_original_1694_1906.jpg')}}" onload="this.onload=null;this.sizes=Math.ceil(this.getBoundingClientRect().width/window.innerWidth*100)+'vw';" sizes="1px" data-src="storage/35048/a4bcbfb3__header.jpg" width="1694" class="img-fluid lazy" alt="Simplon.co">
+</div><div class="header-home-subtitle"><div class="container"><h1 class="header-home-titles">Simplon, r&#233;seau de Fabriques
+		<br>num&#233;riques et inclusives
+	  </h1><p>Simplon.co est un r&#233;seau de Fabriques solidaires et inclusives qui proposent des formations gratuites aux m&#233;tiers techniques du num&#233;rique en France et &#224; l&#8217;&#233;tranger
+	  </p><a href="./51dfbaf3__notre-offre-de-formation.html" class="header-home-btn btn btn-light"><span data-highlightable="1" class="header-home-btn-text">Notre offre de formation</span></a></div></div></div><div class="container"><div id="il3gf" class="title smp-title-color-1"><h2>Notre impact
+	</h2></div></div><div class="key-figures smp-numbers-bloc"><div class="number-bloc"><div class="number-row row"><div class="number"><p>11 476</p></div><div class="number-text"><p>Simplonien.ne.s dans le monde dont 37 % d'apprenantes</p></div></div></div><div class="number-bloc"><div class="number-row row"><div class="number"><p>109</p></div><div class="number-text"><p>Fabriques dans le monde
+		</p></div></div></div><div class="number-bloc"><div class="number-row row"><div class="number"><p>67 %</p></div><div class="number-text"><p>De sorties positives apr&#232;s la formation
+		</p></div></div></div></div><div class="component-cta"><a href="uploads/Site%20national/chiffres%20d%27impact/de8c6b1b__Rapport%20d%27impact%20T4%202020.pdf" target="_blank" rel="noopener" class="btn btn-primary"><span data-highlightable="1">Notre bilan d'impact social</span></a></div><div class="bloc-cards spm-colored-background-blue-grey"><div class="spm-bloc-cards row m-0"><div class="spm-bloc-card col-md-6"><div class="smp-card card"><img src="uploads/Site%20national/Articles-site-nationale/5d264160__Formation-Simplonco.png" alt="Card image cap" class="card-img-top img-fluid"><div class="card-body"><h5 class="card-title"><strong>Workforce : nos formations courtes et certifiantes &#224; 0&#8364; de reste &#224; charge&#160;<br></strong></h5><div class="card-text"><p>Vous &#234;tes salari&#233;.e ou demandeur.se d'emploi ?&#160;<br>Simplon.co vous propose des formations courtes et certifiantes pour acqu&#233;rir les comp&#233;tences indispensables dans un environnement professionnel num&#233;ris&#233;.&#160;</p></div><a href="../workforce.simplon.co/file_76167ea6.pwc" tabindex="0" rel="noopener" class="btn btn-primary"><span data-highlightable="1">En savoir plus&#160;</span></a></div></div></div><div class="spm-bloc-card col-md-6"><div class="smp-card card"><img src="uploads/Site%20national/Articles-site-nationale/64b2a63b__SIMPLON%20-%20Formation-Alternace.jpg" alt="Card image cap" class="card-img-top img-fluid"><div class="card-body"><h5 class="card-title"><strong><h5 class="card-title">Alternance : d&#233;couvrez notre programmation 2021/2022&#8203;&#8203;&#8203;&#8203;&#8203;&#8203;&#8203;<br></h5></strong></h5><div class="card-text"><p>Au programme ? Intelligence artificielle, cybers&#233;curit&#233;, cloud ou encore d&#233;veloppement web, nous programmons plusieurs dizaines de promotions de niveau bac &#224; bac+2, dans toute la France pour former les futurs talents du num&#233;rique</p></div><a href="blog/actualites/e44b110e__alternance-decouvrez-notre-programmation-2021-2022.html" tabindex="0" rel="noopener" class="btn btn-primary"><span data-highlightable="1">en sAvoir plus&#160;</span></a></div></div></div></div></div><div class="component-card smp-box no-image spm-colored-background-blue-grey"><div class="container smp-card card"><div class="card-body"><a href="./36be6d5c__nos-actualites.html" tabindex="0" rel="noopener" class="btn btn-primary"><span data-highlightable="1">D&#233;couvrir toutes nos actualit&#233;s</span></a></div></div></div><div class="container"><div class="title smp-title-color-1"><h2>Leurs t&#233;moignages</h2></div></div><div data-config='{"widget":"slider-component","id":1,"cat_id":"2","subcat_id":"42","options":{"dots":true,"infinite":true,"slidesToShow":1,"slidesToScroll":1,"autoplay":false}}' id="carousel_tovfu4nvd" class="slider-component shortcode spm-colored-background-white-square-line"><div class="slide-component slide-testimony">
+    <div class="row testimony">
+        <div class="col-md-4 testimony-image">
+                            <img data-src="storage/36594/conversions/e21a8edd__Marie-Line-EYERMANN_BNP-T%C3%A9moignage-Simplon.co-thumb.jpg" alt="Marie-Line EYERMANN_BNP-T&#233;moignage-Simplon.co" class="img-fluid lazy">
+
+                    </div>
+        <div class="col-md-8 testimony-content">
+            <div class="card-text testimony-text"><p>A titre personnel, je suis habit&#233;e par l&#8217;engagement.<br>
+Je suis particuli&#232;rement fi&#232;re de donner du sens &#224; mon m&#233;tier pour faire grandir ces entreprises &#224; impact a fortiori dans le contexte actuel.</p>
+
+<p>&#160;</p></div>
+            <h5 class="card-title testimony-name">Marie-Line EYERMANN, charg&#233;e d&#8217;affaires Entreprises P&#244;le Impact PME  chez BNP PARIBAS</h5>
+                                        <a href="blog/actualites/d00c52d7__marie-line-eyermann-je-suis-la-banquiere-des-pme-a-impact.html" class="testimony-link">Lire la suite</a>
+                    </div>
+    </div>
+</div>
+
+            <div class="slide-component slide-testimony">
+    <div class="row testimony">
+        <div class="col-md-4 testimony-image">
+                            <img data-src="{{ url_for('static', filename='simplon_storage/36591/conversions/54d0ec34__Matildad_Hackeuses_Portrait-thumb.jpg')}}" alt="Matildad_Hackeuses_Portrait" class="img-fluid lazy">
+
+                    </div>
+        <div class="col-md-8 testimony-content">
+            <div class="card-text testimony-text"><p>J&#8217;ai d&#233;couvert Simplon gr&#226;ce &#224; un ami. Il m&#8217;a dit que si le d&#233;veloppement m&#8217;int&#233;ressait et dans un cadre inclusif, Simplon pourrait me correspondre le mieux. Au vu de mes convictions qui sont l&#8217;inclusion, la solidarit&#233;, le f&#233;minisme et l'&#233;co-responsabilit&#233;, c&#8217;est le cas et je lui en suis fort reconnaissante aujourd'hui.&#160;</p>
+
+<p><br>
+&#160;</p></div>
+            <h5 class="card-title testimony-name">Matildad, apprenante programme Hackeuses &#160;&#224; Paris 20.</h5>
+                                        <a href="blog/actualites/eeaa947b__matildad-si-le-developpement-web-m-interessait-et-dans-un-cadre-inclusif-simplon-pourrait-me-correspondre.html" class="testimony-link">Lire la suite</a>
+                    </div>
+    </div>
+</div>
+
+            <div class="slide-component slide-testimony">
+    <div class="row testimony">
+        <div class="col-md-4 testimony-image">
+                            <img data-src="{{ url_for('static', filename='simplon_storage/35955/conversions/cf890b9a__Apprenant-Amer-programme-Refugeek-thumb.jpg')}}" alt="Apprenant-Amer-programme-Refugeek" class="img-fluid lazy">
+
+                    </div>
+        <div class="col-md-8 testimony-content">
+            <div class="card-text testimony-text"><p>Ce qui me pla&#238;t, c&#8217;est que c&#8217;est bas&#233; sur la pratique. On utilise la p&#233;dagogie active. On apprend en travaillant tous les jours avec des mises en situation pratique. Par exemple, dans le projet, on doit se d&#233;brouiller et chercher sur internet. Si on est bloqu&#233;, on demande aux amis, et si on est tous bloqu&#233;s, on demande le soutien des formateurs. Et &#231;a encourage &#224; apprendre, parce que c&#8217;est toi qui trouves la solution.</p></div>
+            <h5 class="card-title testimony-name">Amer, apprenant Technicien en assistance informatique &#224; V&#233;nissieux</h5>
+                                        <a href="blog/actualites/32078b03__interview-avec-amer-apprenant-tai-a-venissieux.html" class="testimony-link">Lire la suite</a>
+                    </div>
+    </div>
+</div>
+
+            <div class="slide-component slide-testimony">
+    <div class="row testimony">
+        <div class="col-md-4 testimony-image">
+                            <img data-src="{{ url_for('static', filename='simplon_storage/14601/conversions/c57ee45f__Olivier-Rouet-LinkedIn-thumb.jpg')}}" alt="Olivier Rouet LinkedIn" class="img-fluid lazy">
+
+                    </div>
+        <div class="col-md-8 testimony-content">
+            <div class="card-text testimony-text"><p>Le GRETA Val de Loire fait partie d&#8217;un r&#233;seau national et intervient dans de nombreux champs de la formation professionnelle. Le partenariat avec Simplon a &#233;t&#233; l&#8217;occasion d&#8217;&#233;toffer notre offre de formation au num&#233;rique, de confronter et d&#8217;enrichir nos pratiques p&#233;dagogiques en rejoignant un r&#233;seau sp&#233;cialis&#233; dans la formation inclusive aux m&#233;tiers du num&#233;rique. Nous avons mont&#233; une formation D&#233;veloppeur Data et lan&#231;ons notre 2&#232;me promotion tr&#232;s prochainement. C&#8217;est un partenariat riche pour nos 2 structures.</p></div>
+            <h5 class="card-title testimony-name">Oliver Rouet, Conseiller en Formation, GRETA Val de Loire</h5>
+                                </div>
+    </div>
+</div>
+
+            <div class="slide-component slide-testimony">
+    <div class="row testimony">
+        <div class="col-md-4 testimony-image">
+                            <img data-src="{{ url_for('static', filename='simplon_storage/1711/conversions/bdabf038__Nadia-thumb.jpg')}}" alt="Nadia" class="img-fluid lazy">
+
+                    </div>
+        <div class="col-md-8 testimony-content">
+            <div class="card-text testimony-text"><p><span style="background-color:transparent; color:#000000">Je n&#8217;avais aucune id&#233;e de l&#8217;existence de Simplon. J&#8217;&#233;tais int&#233;ress&#233;e par le domaine du num&#233;rique. Dans les offres de P&#244;le Emploi, j&#8217;ai trouv&#233; Simplon et j&#8217;ai postul&#233;. Au d&#233;but, c&#8217;&#233;tait effrayant parce que je n&#8217;avais aucune id&#233;e de l&#8217;environnement g&#233;n&#233;ral de la formation technique. Maintenant, je sais ce que signifie la formation technique, et je connais le niveau des autres apprenants. C&#8217;est bien, ils sont tr&#232;s motiv&#233;s. La formation demande beaucoup de travail pour arriver au bout.</span></p></div>
+            <h5 class="card-title testimony-name">Nadia, primo-arrivante en formation D&#233;veloppeuse data &#224; Nanterre</h5>
+                                        <a href="blog/actualites/4555d5e1__entretien-avec-nadia-primo-arrivante-en-formation-developpeur-se-data-a-nanterre.html" class="testimony-link">Lire la suite</a>
+                    </div>
+    </div>
+</div>
+
+    </div><div class="component-contact spm-colored-background-red"><div class="smp-box vertical"><div class="container-background">
+	</div><div class="container"><div><h2 class="smp-title blue"><span>Besoin d'une information ?</span></h2></div><div class="link-whit-rounded-icon"><a href="./99abccff__contact.html" rel="noopener" class="link-whit-rounded-icon-box"><span class="link-whit-rounded-icon-text">Nous contacter</span></a></div></div></div></div><div class="container"><div id="i45zj" class="title smp-title-color-2"><h2>Nos soutiens</h2></div></div><div data-config='{"widget":"slider-component","id":1,"cat_id":"3","subcat_id":"39","options":{"dots":true,"infinite":true,"autoplay":true,"slidesToShow":5,"slidesToScroll":5}}' id="carousel_nh9f8ia6x" order="156,643,155,130,129,128,127,126,125,124,123,122,120,119,118,117,116,115,114,112,111,110,109,108,107,106,105,103,102,101,100,99,98,97,96,95,93,91,90,89,88" class="slider-component shortcode partener-slide"><div class="carousel-block" data-gjs-droppable=".carousel-item-block">
+                    <div class="carousel-item-block partener-slide" data-gjs-draggable=".carousel-block" partnerid="156" data-gjs-type="wrapper">
+                <div class="carousel-item slide-component slide-partner  active " data-gjs-type="default">
+    <div class="partener" data-gjs-type="default">
+        <div class="partener-image" data-gjs-type="default">
+                           <img class="img-fluid" data-gjs-type="default" src="{{ url_for('static', filename='simplon_storage/2176/79c56d5a__fondation-Fdj.png')}}" alt="Fondation FDJ">
+                    </div>
+    </div>
+</div>
+
+            </div>
+                    <div class="carousel-item-block partener-slide" data-gjs-draggable=".carousel-block" partnerid="643" data-gjs-type="wrapper">
+                <div class="carousel-item slide-component slide-partner " data-gjs-type="default">
+    <div class="partener" data-gjs-type="default">
+        <div class="partener-image" data-gjs-type="default">
+                           <img class="img-fluid" data-gjs-type="default" src="{{ url_for('static', filename='simplon_storage/34459/18ba8730__PoleEmploi.jpeg')}}" alt="Pole emploi">
+                    </div>
+    </div>
+</div>
+
+            </div>
+                    <div class="carousel-item-block partener-slide" data-gjs-draggable=".carousel-block" partnerid="155" data-gjs-type="wrapper">
+                <div class="carousel-item slide-component slide-partner " data-gjs-type="default">
+    <div class="partener" data-gjs-type="default">
+        <div class="partener-image" data-gjs-type="default">
+                           <img class="img-fluid" data-gjs-type="default" src="{{ url_for('static', filename='simplon_storage/2175/928fd191__Apple-Logo.gif')}}" alt="Apple">
+                    </div>
+    </div>
+</div>
+
+            </div>
+                    <div class="carousel-item-block partener-slide" data-gjs-draggable=".carousel-block" partnerid="130" data-gjs-type="wrapper">
+                <div class="carousel-item slide-component slide-partner " data-gjs-type="default">
+    <div class="partener" data-gjs-type="default">
+        <div class="partener-image" data-gjs-type="default">
+                           <img class="img-fluid" data-gjs-type="default" src="{{ url_for('static', filename='simplon_storage/1812/d47597a7__Logo_FrenchImpact_RVB_Web.png')}}" alt="Frenchhome">
+                    </div>
+    </div>
+</div>
+
+            </div>
+                    <div class="carousel-item-block partener-slide" data-gjs-draggable=".carousel-block" partnerid="129" data-gjs-type="wrapper">
+                <div class="carousel-item slide-component slide-partner " data-gjs-type="default">
+    <div class="partener" data-gjs-type="default">
+        <div class="partener-image" data-gjs-type="default">
+                           <img class="img-fluid" data-gjs-type="default" src="storage/1705/32f6b50e__frenchtech-1.png" alt="French Tech">
+                    </div>
+    </div>
+</div>
+
+            </div>
+                    <div class="carousel-item-block partener-slide" data-gjs-draggable=".carousel-block" partnerid="128" data-gjs-type="wrapper">
+                <div class="carousel-item slide-component slide-partner " data-gjs-type="default">
+    <div class="partener" data-gjs-type="default">
+        <div class="partener-image" data-gjs-type="default">
+                           <img class="img-fluid" data-gjs-type="default" src="storage/1704/6ac24c76__ashoka-1.png" alt="Ashoka">
+                    </div>
+    </div>
+</div>
+
+            </div>
+                    <div class="carousel-item-block partener-slide" data-gjs-draggable=".carousel-block" partnerid="127" data-gjs-type="wrapper">
+                <div class="carousel-item slide-component slide-partner " data-gjs-type="default">
+    <div class="partener" data-gjs-type="default">
+        <div class="partener-image" data-gjs-type="default">
+                           <img class="img-fluid" data-gjs-type="default" src="storage/1703/2b3c7ca5__logo_GEN.png" alt="GEN Grande &#201;COLE DU NUM&#201;RIQUE">
+                    </div>
+    </div>
+</div>
+
+            </div>
+                    <div class="carousel-item-block partener-slide" data-gjs-draggable=".carousel-block" partnerid="126" data-gjs-type="wrapper">
+                <div class="carousel-item slide-component slide-partner " data-gjs-type="default">
+    <div class="partener" data-gjs-type="default">
+        <div class="partener-image" data-gjs-type="default">
+                           <img class="img-fluid" data-gjs-type="default" src="storage/1702/86921f4f__logo-FFE.png" alt="FFE fondation la France s&#8217;engage">
+                    </div>
+    </div>
+</div>
+
+            </div>
+                    <div class="carousel-item-block partener-slide" data-gjs-draggable=".carousel-block" partnerid="125" data-gjs-type="wrapper">
+                <div class="carousel-item slide-component slide-partner " data-gjs-type="default">
+    <div class="partener" data-gjs-type="default">
+        <div class="partener-image" data-gjs-type="default">
+                           <img class="img-fluid" data-gjs-type="default" src="storage/1701/3ba7603d__new-logo-epic-01.jpg" alt="epic">
+                    </div>
+    </div>
+</div>
+
+            </div>
+                    <div class="carousel-item-block partener-slide" data-gjs-draggable=".carousel-block" partnerid="124" data-gjs-type="wrapper">
+                <div class="carousel-item slide-component slide-partner " data-gjs-type="default">
+    <div class="partener" data-gjs-type="default">
+        <div class="partener-image" data-gjs-type="default">
+                           <img class="img-fluid" data-gjs-type="default" src="storage/1700/68d0801f__Logo-AG2R.png" alt="AG2R LA MONDIALE">
+                    </div>
+    </div>
+</div>
+
+            </div>
+                    <div class="carousel-item-block partener-slide" data-gjs-draggable=".carousel-block" partnerid="123" data-gjs-type="wrapper">
+                <div class="carousel-item slide-component slide-partner " data-gjs-type="default">
+    <div class="partener" data-gjs-type="default">
+        <div class="partener-image" data-gjs-type="default">
+                           <img class="img-fluid" data-gjs-type="default" src="storage/1699/f778d013__Fondation-Soci%C3%A9t%C3%A9-G%C3%A9n%C3%A9rale_logo.png" alt="FONDATION SOLIDARIT&#201; SOCI&#201;T&#201; G&#201;N&#201;RALE">
+                    </div>
+    </div>
+</div>
+
+            </div>
+                    <div class="carousel-item-block partener-slide" data-gjs-draggable=".carousel-block" partnerid="122" data-gjs-type="wrapper">
+                <div class="carousel-item slide-component slide-partner " data-gjs-type="default">
+    <div class="partener" data-gjs-type="default">
+        <div class="partener-image" data-gjs-type="default">
+                           <img class="img-fluid" data-gjs-type="default" src="storage/1698/7396a4c4__Logo-Microsoft.png" alt="MICROSOFT">
+                    </div>
+    </div>
+</div>
+
+            </div>
+                    <div class="carousel-item-block partener-slide" data-gjs-draggable=".carousel-block" partnerid="120" data-gjs-type="wrapper">
+                <div class="carousel-item slide-component slide-partner " data-gjs-type="default">
+    <div class="partener" data-gjs-type="default">
+        <div class="partener-image" data-gjs-type="default">
+                           <img class="img-fluid" data-gjs-type="default" src="storage/1696/b4cff8bc__5b310f6eacd0f_total-foundation-rgb-pour-digital-v1-jpg.png" alt="Total Foundation">
+                    </div>
+    </div>
+</div>
+
+            </div>
+                    <div class="carousel-item-block partener-slide" data-gjs-draggable=".carousel-block" partnerid="119" data-gjs-type="wrapper">
+                <div class="carousel-item slide-component slide-partner " data-gjs-type="default">
+    <div class="partener" data-gjs-type="default">
+        <div class="partener-image" data-gjs-type="default">
+                           <img class="img-fluid" data-gjs-type="default" src="storage/1695/7e8608fe__orange-1.png" alt="Orange">
+                    </div>
+    </div>
+</div>
+
+            </div>
+                    <div class="carousel-item-block partener-slide" data-gjs-draggable=".carousel-block" partnerid="118" data-gjs-type="wrapper">
+                <div class="carousel-item slide-component slide-partner " data-gjs-type="default">
+    <div class="partener" data-gjs-type="default">
+        <div class="partener-image" data-gjs-type="default">
+                           <img class="img-fluid" data-gjs-type="default" src="storage/1694/d9bf021d__fondation-bnpp-1.jpg" alt="BNP  PARIBAS">
+                    </div>
+    </div>
+</div>
+
+            </div>
+                    <div class="carousel-item-block partener-slide" data-gjs-draggable=".carousel-block" partnerid="117" data-gjs-type="wrapper">
+                <div class="carousel-item slide-component slide-partner " data-gjs-type="default">
+    <div class="partener" data-gjs-type="default">
+        <div class="partener-image" data-gjs-type="default">
+                           <img class="img-fluid" data-gjs-type="default" src="storage/37029/aacb1dfc__Capgemini_Logo.jpg" alt="Capgemini">
+                    </div>
+    </div>
+</div>
+
+            </div>
+                    <div class="carousel-item-block partener-slide" data-gjs-draggable=".carousel-block" partnerid="116" data-gjs-type="wrapper">
+                <div class="carousel-item slide-component slide-partner " data-gjs-type="default">
+    <div class="partener" data-gjs-type="default">
+        <div class="partener-image" data-gjs-type="default">
+                           <img class="img-fluid" data-gjs-type="default" src="storage/1686/968e6ad6__Allianz_logo.png" alt="Allianz">
+                    </div>
+    </div>
+</div>
+
+            </div>
+                    <div class="carousel-item-block partener-slide" data-gjs-draggable=".carousel-block" partnerid="115" data-gjs-type="wrapper">
+                <div class="carousel-item slide-component slide-partner " data-gjs-type="default">
+    <div class="partener" data-gjs-type="default">
+        <div class="partener-image" data-gjs-type="default">
+                           <img class="img-fluid" data-gjs-type="default" src="storage/1685/a24a3904__1280px-La_Poste_logo.svg.png" alt="LA POSTE">
+                    </div>
+    </div>
+</div>
+
+            </div>
+                    <div class="carousel-item-block partener-slide" data-gjs-draggable=".carousel-block" partnerid="114" data-gjs-type="wrapper">
+                <div class="carousel-item slide-component slide-partner " data-gjs-type="default">
+    <div class="partener" data-gjs-type="default">
+        <div class="partener-image" data-gjs-type="default">
+                           <img class="img-fluid" data-gjs-type="default" src="storage/1684/dc96fad6__jpmorgan-1.png" alt="J.P MORGAN">
+                    </div>
+    </div>
+</div>
+
+            </div>
+                    <div class="carousel-item-block partener-slide" data-gjs-draggable=".carousel-block" partnerid="112" data-gjs-type="wrapper">
+                <div class="carousel-item slide-component slide-partner " data-gjs-type="default">
+    <div class="partener" data-gjs-type="default">
+        <div class="partener-image" data-gjs-type="default">
+                           <img class="img-fluid" data-gjs-type="default" src="storage/1682/0bb24960__caissedepot-1.png" alt="Caisse des d&#233;p&#244;ts">
+                    </div>
+    </div>
+</div>
+
+            </div>
+                    <div class="carousel-item-block partener-slide" data-gjs-draggable=".carousel-block" partnerid="111" data-gjs-type="wrapper">
+                <div class="carousel-item slide-component slide-partner " data-gjs-type="default">
+    <div class="partener" data-gjs-type="default">
+        <div class="partener-image" data-gjs-type="default">
+                           <img class="img-fluid" data-gjs-type="default" src="storage/1681/02d24f28__France-active.png" alt="FRANCE ACTIVE">
+                    </div>
+    </div>
+</div>
+
+            </div>
+                    <div class="carousel-item-block partener-slide" data-gjs-draggable=".carousel-block" partnerid="110" data-gjs-type="wrapper">
+                <div class="carousel-item slide-component slide-partner " data-gjs-type="default">
+    <div class="partener" data-gjs-type="default">
+        <div class="partener-image" data-gjs-type="default">
+                           <img class="img-fluid" data-gjs-type="default" src="storage/1680/32dadad4__phitrust-1.png" alt="PHITRUST">
+                    </div>
+    </div>
+</div>
+
+            </div>
+                    <div class="carousel-item-block partener-slide" data-gjs-draggable=".carousel-block" partnerid="109" data-gjs-type="wrapper">
+                <div class="carousel-item slide-component slide-partner " data-gjs-type="default">
+    <div class="partener" data-gjs-type="default">
+        <div class="partener-image" data-gjs-type="default">
+                           <img class="img-fluid" data-gjs-type="default" src="storage/1679/1e4636fd__Inco.jpg" alt="INCO">
+                    </div>
+    </div>
+</div>
+
+            </div>
+                    <div class="carousel-item-block partener-slide" data-gjs-draggable=".carousel-block" partnerid="108" data-gjs-type="wrapper">
+                <div class="carousel-item slide-component slide-partner " data-gjs-type="default">
+    <div class="partener" data-gjs-type="default">
+        <div class="partener-image" data-gjs-type="default">
+                           <img class="img-fluid" data-gjs-type="default" src="storage/1678/e40df152__Aviva_Logo.svg.png" alt="AVIVA">
+                    </div>
+    </div>
+</div>
+
+            </div>
+                    <div class="carousel-item-block partener-slide" data-gjs-draggable=".carousel-block" partnerid="107" data-gjs-type="wrapper">
+                <div class="carousel-item slide-component slide-partner " data-gjs-type="default">
+    <div class="partener" data-gjs-type="default">
+        <div class="partener-image" data-gjs-type="default">
+                           <img class="img-fluid" data-gjs-type="default" src="storage/1677/245b7a36__amundi-1.png" alt="AMUNDI">
+                    </div>
+    </div>
+</div>
+
+            </div>
+                    <div class="carousel-item-block partener-slide" data-gjs-draggable=".carousel-block" partnerid="106" data-gjs-type="wrapper">
+                <div class="carousel-item slide-component slide-partner " data-gjs-type="default">
+    <div class="partener" data-gjs-type="default">
+        <div class="partener-image" data-gjs-type="default">
+                           <img class="img-fluid" data-gjs-type="default" src="storage/1676/43853ee6__logo-mirova.png" alt="Mirova">
+                    </div>
+    </div>
+</div>
+
+            </div>
+                    <div class="carousel-item-block partener-slide" data-gjs-draggable=".carousel-block" partnerid="105" data-gjs-type="wrapper">
+                <div class="carousel-item slide-component slide-partner " data-gjs-type="default">
+    <div class="partener" data-gjs-type="default">
+        <div class="partener-image" data-gjs-type="default">
+                           <img class="img-fluid" data-gjs-type="default" src="storage/1675/49f98d35__logo-esfin-gestion.gif" alt="ESFIN GESTION">
+                    </div>
+    </div>
+</div>
+
+            </div>
+                    <div class="carousel-item-block partener-slide" data-gjs-draggable=".carousel-block" partnerid="103" data-gjs-type="wrapper">
+                <div class="carousel-item slide-component slide-partner " data-gjs-type="default">
+    <div class="partener" data-gjs-type="default">
+        <div class="partener-image" data-gjs-type="default">
+                           <img class="img-fluid" data-gjs-type="default" src="storage/1673/94578e4c__caissedepot-1.png" alt="Groupe Caisse des D&#233;p&#244;ts">
+                    </div>
+    </div>
+</div>
+
+            </div>
+                    <div class="carousel-item-block partener-slide" data-gjs-draggable=".carousel-block" partnerid="102" data-gjs-type="wrapper">
+                <div class="carousel-item slide-component slide-partner " data-gjs-type="default">
+    <div class="partener" data-gjs-type="default">
+        <div class="partener-image" data-gjs-type="default">
+                           <img class="img-fluid" data-gjs-type="default" src="storage/1672/a2864cc8__investissementavenir-1.png" alt="Investissements d&#8217;avenir">
+                    </div>
+    </div>
+</div>
+
+            </div>
+                    <div class="carousel-item-block partener-slide" data-gjs-draggable=".carousel-block" partnerid="101" data-gjs-type="wrapper">
+                <div class="carousel-item slide-component slide-partner " data-gjs-type="default">
+    <div class="partener" data-gjs-type="default">
+        <div class="partener-image" data-gjs-type="default">
+                           <img class="img-fluid" data-gjs-type="default" src="storage/1671/fc506b7b__Drapeau-Union-europeenne-avec-logo-UE_large.jpg" alt="Union Europ&#233;enne">
+                    </div>
+    </div>
+</div>
+
+            </div>
+                    <div class="carousel-item-block partener-slide" data-gjs-draggable=".carousel-block" partnerid="100" data-gjs-type="wrapper">
+                <div class="carousel-item slide-component slide-partner " data-gjs-type="default">
+    <div class="partener" data-gjs-type="default">
+        <div class="partener-image" data-gjs-type="default">
+                           <img class="img-fluid" data-gjs-type="default" src="storage/1670/41d246c6__europejeunes-1.png" alt="L&#8217;Europe s&#8217;engage par l&#8217;EMPLOI DES JEUNES">
+                    </div>
+    </div>
+</div>
+
+            </div>
+                    <div class="carousel-item-block partener-slide" data-gjs-draggable=".carousel-block" partnerid="99" data-gjs-type="wrapper">
+                <div class="carousel-item slide-component slide-partner " data-gjs-type="default">
+    <div class="partener" data-gjs-type="default">
+        <div class="partener-image" data-gjs-type="default">
+                           <img class="img-fluid" data-gjs-type="default" src="storage/1669/3cc86b95__logo-fse-l_europe-s_engage-avec-le-FSE.png" alt="L&#8217;europe s&#8217;engage en ile-de-France avec le FSE">
+                    </div>
+    </div>
+</div>
+
+            </div>
+                    <div class="carousel-item-block partener-slide" data-gjs-draggable=".carousel-block" partnerid="98" data-gjs-type="wrapper">
+                <div class="carousel-item slide-component slide-partner " data-gjs-type="default">
+    <div class="partener" data-gjs-type="default">
+        <div class="partener-image" data-gjs-type="default">
+                           <img class="img-fluid" data-gjs-type="default" src="storage/1668/45c5c438__logo-region-ile-de-france.png" alt="Ile de France">
+                    </div>
+    </div>
+</div>
+
+            </div>
+                    <div class="carousel-item-block partener-slide" data-gjs-draggable=".carousel-block" partnerid="97" data-gjs-type="wrapper">
+                <div class="carousel-item slide-component slide-partner " data-gjs-type="default">
+    <div class="partener" data-gjs-type="default">
+        <div class="partener-image" data-gjs-type="default">
+                           <img class="img-fluid" data-gjs-type="default" src="storage/1667/5d512e82__Paris-code.jpg" alt="PARIS CODE">
+                    </div>
+    </div>
+</div>
+
+            </div>
+                    <div class="carousel-item-block partener-slide" data-gjs-draggable=".carousel-block" partnerid="96" data-gjs-type="wrapper">
+                <div class="carousel-item slide-component slide-partner " data-gjs-type="default">
+    <div class="partener" data-gjs-type="default">
+        <div class="partener-image" data-gjs-type="default">
+                           <img class="img-fluid" data-gjs-type="default" src="storage/1666/2f03ce9c__logo-ecole-regionale-du-numerique.jpg" alt="l&#8217;ECOLE R&#201;GIONALE DU NUM&#201;RIQUE OCCITANIE">
+                    </div>
+    </div>
+</div>
+
+            </div>
+                    <div class="carousel-item-block partener-slide" data-gjs-draggable=".carousel-block" partnerid="95" data-gjs-type="wrapper">
+                <div class="carousel-item slide-component slide-partner " data-gjs-type="default">
+    <div class="partener" data-gjs-type="default">
+        <div class="partener-image" data-gjs-type="default">
+                           <img class="img-fluid" data-gjs-type="default" src="storage/1665/cafc6dde__Logo-FAMI.png" alt="FAMI [L&#8217;Europe se mobilise]">
+                    </div>
+    </div>
+</div>
+
+            </div>
+                    <div class="carousel-item-block partener-slide" data-gjs-draggable=".carousel-block" partnerid="93" data-gjs-type="wrapper">
+                <div class="carousel-item slide-component slide-partner " data-gjs-type="default">
+    <div class="partener" data-gjs-type="default">
+        <div class="partener-image" data-gjs-type="default">
+                           <img class="img-fluid" data-gjs-type="default" src="storage/2173/d11790af__mouves-logo-horizontal-white-copie.png" alt="mouves">
+                    </div>
+    </div>
+</div>
+
+            </div>
+                    <div class="carousel-item-block partener-slide" data-gjs-draggable=".carousel-block" partnerid="91" data-gjs-type="wrapper">
+                <div class="carousel-item slide-component slide-partner " data-gjs-type="default">
+    <div class="partener" data-gjs-type="default">
+        <div class="partener-image" data-gjs-type="default">
+                           <img class="img-fluid" data-gjs-type="default" src="storage/1660/e6fa1c28__logo-la-mednum.png" alt="La mednum">
+                    </div>
+    </div>
+</div>
+
+            </div>
+                    <div class="carousel-item-block partener-slide" data-gjs-draggable=".carousel-block" partnerid="90" data-gjs-type="wrapper">
+                <div class="carousel-item slide-component slide-partner " data-gjs-type="default">
+    <div class="partener" data-gjs-type="default">
+        <div class="partener-image" data-gjs-type="default">
+                           <img class="img-fluid" data-gjs-type="default" src="storage/1659/41155c7f__stravos_n.png" alt="Stranos">
+                    </div>
+    </div>
+</div>
+
+            </div>
+                    <div class="carousel-item-block partener-slide" data-gjs-draggable=".carousel-block" partnerid="89" data-gjs-type="wrapper">
+                <div class="carousel-item slide-component slide-partner " data-gjs-type="default">
+    <div class="partener" data-gjs-type="default">
+        <div class="partener-image" data-gjs-type="default">
+                           <img class="img-fluid" data-gjs-type="default" src="storage/1658/fbaba32c__bofaml-og-logo.jpg" alt="Bank of America">
+                    </div>
+    </div>
+</div>
+
+            </div>
+                    <div class="carousel-item-block partener-slide" data-gjs-draggable=".carousel-block" partnerid="88" data-gjs-type="wrapper">
+                <div class="carousel-item slide-component slide-partner " data-gjs-type="default">
+    <div class="partener" data-gjs-type="default">
+        <div class="partener-image" data-gjs-type="default">
+                           <img class="img-fluid" data-gjs-type="default" src="storage/1655/e2667dc2__logo-Sncf-fondation.jpg" alt="Scnf fondation">
+                    </div>
+    </div>
+</div>
+
+            </div>
+            </div>
+</div><div class="component-cta"><a href="./c9207632__ecosysteme-et-partenaires.html" class="btn btn-primary"><span data-highlightable="1">&#201;cosyst&#232;me et partenaires</span></a></div>
+
+        </section>
+    </div>
+
+        </main>
+
+        <footer class="smp_footer_front " id="footer" tabindex="-1">
+            <div class="smp-newsletter-faq-footer">
+    <div class="container p-0">
+        <div class="smp-faq-link-footer">
+            <div class="smp-newsletter-faq-footer-title">Vous avez une question ?</div>
+            <a href="./8e010f56__anti-faq.html" class="btn btn-primary btn-faq background-red fr">Consulter notre Anti-FAQ</a>
+        </div>
+
+        <div class="smp-newsletter-footer">
+            <label for="email-newsletter" class="smp-newsletter-faq-footer-title">Restez inform&#233;s</label>
+            <p>Inscrivez-vous &#224; la newsletter</p>
+            <form class="form-newsletter" action="./1beb4461__inscription-newsletter.html" method="post">
+                <input type="hidden" name="_token" value="G3okE9uQ9gxzvirne3lY4kL8fFO8LipCiErz1lfl">                    <span class="input-label-newsletter">
+                        <input name="email" id="email-newsletter" class="input-newsletter" type="email" placeholder="Entrez votre email" required>
+                    </span>
+
+                <button type="submit" class="btn btn-newsletter background-red">
+                    S'inscrire
+                </button>
+
+            </form>
+
+        </div>
+    </div>
+</div>
+    
+    <div class="footer-logo-text">
+
+                    <a href="/">
+                <img class="footer-logo logo img-fluid" src="images/d788919c__logo-footer.svg" alt="Simplon">
+
+            </a>
+
+                    <nav>
+        <ul class="menu_a11y footer_nav navigation_a11y">
+            <li class="align-middle nav-item nav-link
+                ">
+        <a href="./36be6d5c__nos-actualites.html" class="">
+            Nos actualit&#233;s
+        </a>
+            </li>
+<li class="align-middle nav-item nav-link
+                ">
+        <a href="./ab147ba5__nous-rejoindre.html" class="">
+            Rejoindre nos &#233;quipes
+        </a>
+            </li>
+<li class="align-middle nav-item nav-link
+                ">
+        <a href="../www.simplonprod.co/file_93502c95.pwc" target="_blank" rel="noopener" class="">
+            Notre agence num&#233;rique
+        </a>
+            </li>
+<li class="align-middle nav-item nav-link
+                ">
+        <a href="./7c25a959__presse.html" class="">
+            Presse
+        </a>
+            </li>
+<li class="align-middle nav-item nav-link
+                ">
+        <a href="./33073bb0__plan-du-site.html" class="">
+            Plan du site
+        </a>
+            </li>
+<li class="align-middle nav-item nav-link
+                ">
+        <a href="./99abccff__contact.html" class="">
+            Contact
+        </a>
+            </li>
+<li class="align-middle nav-item nav-link
+                ">
+        <a href="./51cc8113__mentions-legales.html" class="">
+            Mentions l&#233;gales
+        </a>
+            </li>
+<li class="align-middle nav-item nav-link
+                ">
+        <a href="./898ad1cf__accessibilite.html" class="">
+            Accessibilit&#233;
+        </a>
+            </li>
+        </ul>
+    </nav>
+            </div>
+        </footer>
+
+        <div id="scroll_to_top" class="opacity">
+            <img src="images/e3324f23__top.svg" alt="Retourner en haut">
+        </div>
+
+    </div>
+
+    <div class="modal fade" id="a11yModal" tabindex="-1" role="dialog" aria-labelledby="a11yModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="a11yModalLabel"><i class="fa fa-universal-access" aria-hidden="true"></i> Navigation rapide [Shift + Tab]</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&#215;</span>
+                </button>
+            </div>
+            <div class="modal-body site-map-content">
+                <h6>Navigation sur la page</h6>
+                <ul class="navigation_a11y">
+                    <li><a href="#head" class="js-scrollTo" tabindex="0">Haut de page</a></li>
+                    <li><a href="#main" class="js-scrollTo" tabindex="0">Contenu principal</a></li>
+                    <li><a href="#footer" class="js-scrollTo" tabindex="0">Pied de page</a></li>
+                </ul>
+                <h6>Navigation sur le site</h6>
+                <ul class="navigation_a11y">
+                    <li><a href="./33073bb0__plan-du-site.html" tabindex="0">Plan du site</a></li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- !!!!!!!!!!! CHATBOT DEBUT !!!!!!!!!!! -->
+
+    <!-- On envoie les images au script "main.js" pour les avatars : -->
+    <script>
+        var avatarBot = "{{ url_for('static', filename='img/bot.png') }}"
+        var avatarUser = "{{ url_for('static', filename='img/user.png') }}"
+    </script>
+    <!-- On envoie l'historique de chat au script JS via une injection jinja -->
+    <script> var historique = {{ historique_chat|safe }} </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@joeattardi/emoji-button@3.1.1/dist/index.min.js"></script>
+    <script src="{{ url_for('static', filename='scripts/main.js')}}"></script>
+
+    <!-- !!!!!!!!!!! CHATBOT FIN !!!!!!!!!!! -->
+
+
+    <script src="{{ url_for('static', filename='simplon_cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/eafe5730__popper.min.js')}}"></script>
+    <script src="../"></script>
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='simplon_js/5d3c7487__app.js')}}"></script>
+    <script src="{{ url_for('static', filename='simplon_stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/314871ee__bootstrap.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='simplon_cdn.jsdelivr.net/npm/slick-carousel%401.8.1/slick/dfd8ec63__slick.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='simplon_cdn.jsdelivr.net/npm/vanilla-lazyload%4012.2.0/dist/5a0cca90__lazyload.min.js')}}"></script>
+    <script>document.getElementsByTagName("html")[0].className += " js";</script>
+    <script src="{{ url_for('static', filename='simplon_vendor/timeline/js/756ee447__util.js')}}"></script>
+    <script src="{{ url_for('static', filename='simplon_vendor/timeline/js/3d94a727__swipe-content.js')}}"></script>
+    <script src="{{ url_for('static', filename='simplon_vendor/timeline/js/dc53edd2__main.js')}}"></script>
+    <script src="{{ url_for('static', filename='simplon_js/8642b7a4__orejime.js')}}"></script>
+
+    </body>
+</html>
